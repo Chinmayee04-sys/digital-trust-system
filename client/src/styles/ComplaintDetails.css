@@ -1,0 +1,109 @@
+.details {
+  padding: 30px;
+  background: #fff;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.details h2 {
+  margin-bottom: 10px;
+}
+
+.remark {
+  background: #f1f2f6;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+.details-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.details-container h2 {
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.location {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.status.open {
+  background: #f97316;
+}
+
+.status.in-progress {
+  background: #2563eb;
+}
+
+.status.resolved {
+  background: #16a34a;
+}
+
+/* TIMELINE */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline li {
+  padding: 8px;
+  border-left: 4px solid #ccc;
+  margin-bottom: 8px;
+}
+
+.timeline li.done {
+  border-color: #22c55e;
+  color: #16a34a;
+  font-weight: bold;
+}
+
+/* DOCUMENTS */
+.documents li {
+  margin-bottom: 6px;
+}
+
+.documents a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+/* REMARKS */
+.remarks li {
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.remarks span {
+  font-size: 12px;
+  color: #777;
+}
+
+.empty {
+  color: #777;
+}
+
+.error {
+  color: red;
+}
