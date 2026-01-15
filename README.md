@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+## Digital Trust System
+Role-Based Citizen Complaint Management Platform (MERN Stack)
+## Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Digital Trust System is a full-stack web application designed to manage citizen complaints in a structured, transparent, and role-based manner. The system enables citizens to submit complaints, authorities to process and resolve them, and administrators to oversee operations through analytics and assignment controls.
 
-## Available Scripts
+The application is built using the MERN stack (MongoDB, Express.js, React.js, Node.js) and follows RESTful API design principles with secure authentication and authorization.
 
-In the project directory, you can run:
+## Features
+## Citizen
 
-### `npm start`
+User authentication (JWT-based)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Submit complaints with category, description, location, and documents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+View personal complaints and their current status
 
-### `npm test`
+Track complaint details including remarks and uploaded files
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Authority
 
-### `npm run build`
+View complaints assigned by the administrator
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Update complaint status (Open, Under Review, Resolved)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Add official remarks to complaints
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Admin
 
-### `npm run eject`
+Assign and reassign complaints to authorities
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+View system-wide dashboard analytics
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Monitor complaint lifecycle and user statistics
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Tech Stack
+## Frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+React.js
 
-## Learn More
+React Router
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Axios
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+CSS (custom styling)
 
-### Code Splitting
+## Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Node.js
 
-### Analyzing the Bundle Size
+Express.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+MongoDB
 
-### Making a Progressive Web App
+Mongoose
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+JWT Authentication
 
-### Advanced Configuration
+Multer (for document uploads)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Project Structure
+digital-trust-system/
+├── client/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── styles/
+│   │   └── App.js
+│   └── package.json
+│
+├── server/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── uploads/
+│   ├── server.js
+│   └── package.json
+│
+├── .gitignore
+├── README.md
 
-### Deployment
+## API Overview
+Authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+POST /api/auth/login
 
-### `npm run build` fails to minify
+POST /api/auth/register
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Citizen
+
+POST /api/complaints
+
+GET /api/complaints/my
+
+GET /api/complaints/:id
+
+POST /api/complaints/:id/upload
+
+Authority
+
+GET /api/authority/complaints
+
+PATCH /api/authority/complaints/:id/status
+
+POST /api/authority/remarks/:id
+
+Admin
+
+PATCH /api/admin/complaints/:id/assign
+
+GET /api/admin/dashboard
+
+## Authentication & Authorization
+
+JWT tokens are used for secure API access
+
+Role-based access control for Citizen, Authority, and Admin
+
+Protected routes on both frontend and backend
+
+## Setup Instructions
+Prerequisites
+
+Node.js
+
+MongoDB
+
+Git
+
+## Backend Setup
+cd server
+npm install
+npm start
+
+## Frontend Setup
+cd client
+npm install
+npm start
+
+## Status
+
+This project is currently under active development and includes all core features required for a minimum viable product (MVP).
+
+## Author
+
+Chinmayee Reddy
